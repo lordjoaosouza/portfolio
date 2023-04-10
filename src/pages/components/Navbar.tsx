@@ -43,6 +43,7 @@ export default function Navbar() {
           <IconButton
             size={'md'}
             width={10}
+            borderRadius={0}
             icon={isOpen ? <IoMdClose /> : <IoMdMenu />}
             aria-label={'Open Menu'}
             display={{ base: 'inline-flex', md: 'none' }}
