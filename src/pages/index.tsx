@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Joao Souza | Portfolio</title>
+        <title>Joao Souza</title>
       </Head>
       <Navbar />
     </>
