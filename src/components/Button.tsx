@@ -20,12 +20,13 @@ export default function Button({ icon, text, link, target }: ButtonProps) {
         bg-nav_btn
         hover:bg-nav_btn_hov
         font-bold
+        text-sm
         rounded-md
         w-32
         h-10
       '
     >
-      {React.cloneElement(icon, { className: 'w-5 h-5 mr-2' })}
+      {React.cloneElement(icon, { className: 'w-4 h-4 mr-2' })}
       <span>{text}</span>
     </a>
   )

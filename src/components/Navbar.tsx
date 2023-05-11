@@ -39,7 +39,7 @@ export default function Navbar() {
             </div>
           </a>
           <button onClick={toggleMenu} className='sm:hidden'>
-            {showMenu ? <FaChevronUp className='w-6 h-6' /> : <FaChevronDown className='w-6 h-6' />}
+            {showMenu ? <FaChevronUp className='w-4 h-4' /> : <FaChevronDown className='w-4 h-4' />}
           </button>
         </div>
         <div className='flex space-x-2 hidden sm:flex'>
