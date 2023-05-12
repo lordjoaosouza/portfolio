@@ -16,7 +16,7 @@ module.exports = {
     colors: {
       black: "#000000",
       white: "#FFFFFF",
-      navbar: "#141416",
+      main: "#141416",
       nav_btn: "#ffffff",
       nav_btn_hov: "#D5D5D5",
     },

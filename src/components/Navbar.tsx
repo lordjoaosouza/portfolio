@@ -23,7 +23,7 @@ export default function Navbar() {
           flex 
           p-5 
           text-white 
-          bg-navbar
+          bg-main
           h-20 
           items-center 
           justify-center
@@ -54,15 +54,16 @@ export default function Navbar() {
         </div>
       </div>
       {showMenu && (
-        <div className='flex p-5 h-30 bg-navbar sm:hidden flex justify-center items-center space-x-2'>
-          <Button icon={<FaRocket />} text='Stacks' link='#' />
+        <div className='flex p-5 h-30 bg-main sm:hidden flex justify-center items-center space-x-2'>
+          <Button icon={<FaRocket />} text='Stacks' link='#' where='1' />
           <Button
             icon={<FaGithub />}
             text='Projects'
             link='https://github.com/lordjoaosouza'
             target='_blank'
+            where='1'
           />
-          <Button icon={<FaAddressBook />} text='Contact' link='#' />
+          <Button icon={<FaAddressBook />} text='Contact' link='#' where='1' />
         </div>
       )}
     </>
