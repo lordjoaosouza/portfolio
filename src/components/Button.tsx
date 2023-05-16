@@ -1,57 +1,45 @@
-import React, { ReactElement } from 'react'
+import React from 'react'
 
 interface ButtonProps {
-  icon: ReactElement
+  icon: React.ReactElement
   text: string
   link: string
   target?: string
   where?: string
 }
 
-export default function Button({ icon, text, link, target, where }: ButtonProps) {
-  if (where) {
-    return (
-      <a
-        href={link}
-        target={target}
-        className='
-          flex
-          items-center
-          justify-center
-          text-white
-          hover:text-nav_btn_hov
-          font-bold
-          text-sm
-          rounded-md
-          w-32
-          h-10
-        '
-      >
-        {React.cloneElement(icon, { className: 'w-4 h-4 mr-2' })}
-        <span>{text}</span>
-      </a>
-    )
-  }
+const Button: React.FC<ButtonProps> = ({ icon, text, link, target, where }) => {
+  const commonClasses = `
+    flex
+    items-center
+    justify-center
+    font-bold
+    text-xs
+    sm:text-sm
+    rounded-md
+    w-32
+    h-10
+  `
+
+  const linkClasses = where
+    ? `
+      ${commonClasses}
+      text-white
+      hover:text-nav_btn_hov
+    `
+    : `
+      ${commonClasses}
+      text-black
+      bg-nav_btn
+      hover:bg-nav_btn_hov
+    `
+
   return (
-    <a
-      href={link}
-      target={target}
-      className='
-        flex
-        items-center
-        justify-center
-        text-black
-        bg-nav_btn
-        hover:bg-nav_btn_hov
-        font-bold
-        text-sm
-        rounded-md
-        w-32
-        h-10
-      '
-    >
-      {React.cloneElement(icon, { className: 'w-4 h-4 mr-2' })}
+    <a href={link} target={target} className={linkClasses}>
+      {React.cloneElement(icon, { className: 'w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2' })}
       <span>{text}</span>
     </a>
   )
 }
+
+export default Button

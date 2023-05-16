@@ -9,7 +9,7 @@ import {
 } from 'react-icons/fa'
 import Button from './Button'
 
-export default function Navbar() {
+const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false)
 
   const toggleMenu = () => {
@@ -18,23 +18,11 @@ export default function Navbar() {
 
   return (
     <>
-      <div
-        className={`
-          flex 
-          p-5 
-          text-white 
-          bg-main
-          h-20 
-          items-center 
-          justify-center
-          sm:flex-row 
-          sm:justify-between
-        `}
-      >
+      <div className='flex p-5 text-white bg-main h-20 items-center justify-center sm:flex-row sm:justify-between'>
         <div className='flex items-center flex-1 justify-between'>
-          <a href='#' className='ml-2'>
-            <div className='flex font-bold items-center text-xl'>
-              <FaCode className='w-6 h-6 mr-1' />
+          <a href='#' className='hover:text-nav_btn_hov'>
+            <div className='flex font-bold items-center text-lg sm:text-xl'>
+              <FaCode className='w-5 h-5 sm:w-6 sm:h-6 mr-1 sm:mr-2' />
               Joao Souza
             </div>
           </a>
@@ -69,3 +57,5 @@ export default function Navbar() {
     </>
   )
 }
+
+export default Navbar

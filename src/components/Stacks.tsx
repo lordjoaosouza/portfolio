@@ -1,3 +1,4 @@
+import React from 'react'
 import {
   SiLinux,
   SiDocker,
@@ -15,23 +16,19 @@ import {
   SiSqlite,
   SiCplusplus,
   SiArduino,
+  SiGnubash,
 } from 'react-icons/si'
 import { FaJava } from 'react-icons/fa'
-import React from 'react'
 
 interface StackProps {
   icon: React.ReactElement
   text: string
 }
 
-const stacksLangs = [
+const stacksLangs: StackProps[] = [
   {
     icon: <SiPython />,
     text: 'Python',
-  },
-  {
-    icon: <SiDjango />,
-    text: 'Django',
   },
   {
     icon: <SiJavascript />,
@@ -49,9 +46,13 @@ const stacksLangs = [
     icon: <SiCplusplus />,
     text: 'C++',
   },
+  {
+    icon: <SiGnubash />,
+    text: 'ShellScript',
+  },
 ]
 
-const stacksTechs = [
+const stacksTechs: StackProps[] = [
   {
     icon: <SiLinux />,
     text: 'Linux',
@@ -59,6 +60,10 @@ const stacksTechs = [
   {
     icon: <SiDocker />,
     text: 'Docker',
+  },
+  {
+    icon: <SiDjango />,
+    text: 'Django',
   },
   {
     icon: <SiPandas />,
@@ -98,37 +103,32 @@ const stacksTechs = [
   },
 ]
 
-export default function Stacks() {
+const Stacks = () => {
   return (
-    <div className='flex flex-col items-center justify-center text-white m-20' id={'stacks'}>
+    <div
+      className='flex flex-col items-center justify-center text-white text-center m-20 text-lg sm:text-xl'
+      id='stacks'
+    >
       <div className='flex flex-col items-center'>
-        <h2 className='font-bold text-xl'>Languages I Know</h2>
-        <div className='flex'>
-          {stacksLangs.map((stack, index) => (
-            <div
-              key={stack.text}
-              className={`mt-6 flex flex-col items-center ${
-                index !== stacksLangs.length - 1 ? 'mr-6' : ''
-              }`}
-            >
-              {React.cloneElement(stack.icon, { className: 'w-6 h-6 mb-1' })}
-              <span>{stack.text}</span>
+        <h2 className='font-bold'>Languages I Know</h2>
+        <div className='grid grid-rows-2 gap-3 sm:gap-4 grid-flow-col sm:grid-rows-1'>
+          {stacksLangs.map((stack) => (
+            <div key={stack.text} className='mt-6 flex flex-col items-center'>
+              {React.cloneElement(stack.icon, {
+                className: 'w-7 h-7 sm:w-9 sm:h-9 hover:text-nav_btn_hov',
+              })}
             </div>
           ))}
         </div>
       </div>
       <div className='flex flex-col items-center mt-12'>
-        <h2 className='font-bold text-xl'>Technologies I Use</h2>
-        <div className='flex'>
-          {stacksTechs.map((stack, index) => (
-            <div
-              key={stack.text}
-              className={`mt-6 flex flex-col items-center ${
-                index !== stacksTechs.length - 1 ? 'mr-6' : ''
-              }`}
-            >
-              {React.cloneElement(stack.icon, { className: 'w-6 h-6 mb-1' })}
-              <span>{stack.text}</span>
+        <h2 className='font-bold'>Technologies I Use</h2>
+        <div className='grid grid-rows-3 gap-3 sm:gap-4 grid-flow-col sm:grid-rows-1'>
+          {stacksTechs.map((stack) => (
+            <div key={stack.text} className='mt-6 flex flex-col items-center'>
+              {React.cloneElement(stack.icon, {
+                className: 'w-7 h-7 sm:w-9 sm:h-9 hover:text-nav_btn_hov',
+              })}
             </div>
           ))}
         </div>
@@ -136,3 +136,5 @@ export default function Stacks() {
     </div>
   )
 }
+
+export default Stacks
