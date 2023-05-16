@@ -43,7 +43,7 @@ export default function Navbar() {
           </button>
         </div>
         <div className='flex space-x-2 hidden sm:flex'>
-          <Button icon={<FaRocket />} text='Stacks' link='#' />
+          <Button icon={<FaRocket />} text='Stacks' link='/#stacks' />
           <Button
             icon={<FaGithub />}
             text='Projects'
