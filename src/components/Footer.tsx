@@ -1,5 +1,4 @@
-import { FaGithub } from 'react-icons/fa'
-import { FaLinkedin } from 'react-icons/fa'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { AiFillMail } from 'react-icons/ai'
 import { SiBuymeacoffee } from 'react-icons/si'
 import FooterIcon from './FooterIcon'
