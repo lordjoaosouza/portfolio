@@ -19,6 +19,7 @@ import {
   SiGnubash,
 } from 'react-icons/si'
 import { FaJava } from 'react-icons/fa'
+import { Tooltip } from 'react-tooltip'
 
 interface StackProps {
   icon: React.ReactElement
@@ -103,7 +104,7 @@ const stacksTechs: StackProps[] = [
   },
 ]
 
-const Stacks = () => {
+export default function Stacks() {
   return (
     <div
       className='flex flex-col items-center justify-center text-white text-center m-20 my-20 sm:my-40 text-lg sm:text-xl'
@@ -114,10 +115,17 @@ const Stacks = () => {
         <div className='grid grid-rows-2 gap-3 sm:gap-4 grid-flow-col sm:grid-rows-1'>
           {stacksLangs.map((stack) => (
             <div key={stack.text} className='mt-6 flex flex-col items-center'>
-              {React.cloneElement(stack.icon, {
-                className:
-                  'w-7 h-7 sm:w-9 sm:h-9 hover:text-nav_btn_hov hover:scale-105 hover:duration-150',
-              })}
+              <a
+                data-tooltip-id='tooltip'
+                data-tooltip-content={stack.text}
+                data-tooltip-place='top'
+              >
+                {React.cloneElement(stack.icon, {
+                  className:
+                    'w-7 h-7 sm:w-9 sm:h-9 hover:text-nav_btn_hov hover:scale-105 hover:duration-150',
+                })}
+              </a>
+              <Tooltip id='tooltip' />
             </div>
           ))}
         </div>
@@ -127,10 +135,17 @@ const Stacks = () => {
         <div className='grid grid-rows-3 gap-3 sm:gap-4 grid-flow-col sm:grid-rows-1'>
           {stacksTechs.map((stack) => (
             <div key={stack.text} className='mt-6 flex flex-col items-center'>
-              {React.cloneElement(stack.icon, {
-                className:
-                  'w-7 h-7 sm:w-9 sm:h-9 hover:text-nav_btn_hov hover:scale-105 hover:duration-150',
-              })}
+              <a
+                data-tooltip-id='tooltip'
+                data-tooltip-content={stack.text}
+                data-tooltip-place='top'
+              >
+                {React.cloneElement(stack.icon, {
+                  className:
+                    'w-7 h-7 sm:w-9 sm:h-9 hover:text-nav_btn_hov hover:scale-105 hover:duration-150',
+                })}
+              </a>
+              <Tooltip id='tooltip' />
             </div>
           ))}
         </div>
@@ -138,5 +153,3 @@ const Stacks = () => {
     </div>
   )
 }
-
-export default Stacks
