@@ -1,7 +1,8 @@
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
-import Head from 'next/head'
 import Stacks from '@/components/Stacks'
+import Scroll from '@/components/Scroll'
+import Head from 'next/head'
 
 export default function Home() {
   return (
@@ -10,8 +11,9 @@ export default function Home() {
         <title>Joao Souza</title>
       </Head>
       <Navbar />
-      {/* <Hero /> */}
+      <Hero />
       <Stacks />
+      <Scroll />
     </>
   )
 }

@@ -106,28 +106,30 @@ const stacksTechs: StackProps[] = [
 const Stacks = () => {
   return (
     <div
-      className='flex flex-col items-center justify-center text-white text-center m-20 text-lg sm:text-xl'
+      className='flex flex-col items-center justify-center text-white text-center m-20 my-20 sm:my-40 text-lg sm:text-xl'
       id='stacks'
     >
       <div className='flex flex-col items-center'>
-        <h2 className='font-bold'>Languages I Know</h2>
+        <h2 className='font-bold'>Languages I know</h2>
         <div className='grid grid-rows-2 gap-3 sm:gap-4 grid-flow-col sm:grid-rows-1'>
           {stacksLangs.map((stack) => (
             <div key={stack.text} className='mt-6 flex flex-col items-center'>
               {React.cloneElement(stack.icon, {
-                className: 'w-7 h-7 sm:w-9 sm:h-9 hover:text-nav_btn_hov',
+                className:
+                  'w-7 h-7 sm:w-9 sm:h-9 hover:text-nav_btn_hov hover:scale-105 hover:duration-150',
               })}
             </div>
           ))}
         </div>
       </div>
       <div className='flex flex-col items-center mt-12'>
-        <h2 className='font-bold'>Technologies I Use</h2>
+        <h2 className='font-bold'>Technologies I use</h2>
         <div className='grid grid-rows-3 gap-3 sm:gap-4 grid-flow-col sm:grid-rows-1'>
           {stacksTechs.map((stack) => (
             <div key={stack.text} className='mt-6 flex flex-col items-center'>
               {React.cloneElement(stack.icon, {
-                className: 'w-7 h-7 sm:w-9 sm:h-9 hover:text-nav_btn_hov',
+                className:
+                  'w-7 h-7 sm:w-9 sm:h-9 hover:text-nav_btn_hov hover:scale-105 hover:duration-150',
               })}
             </div>
           ))}

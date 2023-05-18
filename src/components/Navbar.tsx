@@ -20,7 +20,7 @@ const Navbar = () => {
     <>
       <div className='flex p-5 text-white bg-main h-20 items-center justify-center sm:flex-row sm:justify-between'>
         <div className='flex items-center flex-1 justify-between'>
-          <a href='#' className='hover:text-nav_btn_hov'>
+          <a href='#'>
             <div className='flex font-bold items-center text-lg sm:text-xl'>
               <FaCode className='w-5 h-5 sm:w-6 sm:h-6 mr-1 sm:mr-2' />
               Joao Souza
@@ -30,14 +30,20 @@ const Navbar = () => {
             {showMenu ? <FaChevronUp className='w-4 h-4' /> : <FaChevronDown className='w-4 h-4' />}
           </button>
         </div>
-        <div className='flex space-x-2 hidden sm:flex'>
+        <div className='flex space-x-4 hidden sm:flex '>
           <Button icon={<FaRocket />} text='Stacks' link='/#stacks' />
-          <Button
-            icon={<FaGithub />}
-            text='Projects'
-            link='https://github.com/lordjoaosouza'
-            target='_blank'
-          />
+          <div className='relative'>
+            <Button
+              icon={<FaGithub />}
+              text='Projects'
+              link='https://github.com/lordjoaosouza'
+              target='_blank'
+            />
+            <span className='absolute top-[10%] right-[3.5%] flex h-2 w-2'>
+              <span className='animate-ping absolute inline-flex h-full w-full rounded-full bg-black opacity-100'></span>
+              <span className='relative inline-flex rounded-full h-2 w-2 bg-hover'></span>
+            </span>
+          </div>
           <Button icon={<FaAddressBook />} text='Contact' link='#' />
         </div>
       </div>

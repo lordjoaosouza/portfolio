@@ -19,6 +19,8 @@ const Button: React.FC<ButtonProps> = ({ icon, text, link, target, where }) => {
     rounded-md
     w-32
     h-10
+    hover:scale-105
+    hover:duration-150
   `
 
   const linkClasses = where
