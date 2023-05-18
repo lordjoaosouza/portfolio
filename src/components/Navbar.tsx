@@ -16,6 +16,14 @@ const Navbar = () => {
     setShowMenu(!showMenu)
   }
 
+  const handleScrollToSection = (section: string) => () => {
+    const sectionElement = document.getElementById(section)
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: 'smooth' })
+    }
+    setShowMenu(false)
+  }
+
   return (
     <>
       <div className='flex p-5 text-white bg-main h-20 items-center justify-center sm:flex-row sm:justify-between'>
@@ -43,8 +51,12 @@ const Navbar = () => {
               <span className='relative inline-flex rounded-full h-2 w-2 bg-hover'></span>
             </span>
           </div>
-          <Button icon={<FaRocket />} text='Stacks' link='/#stacks' />
-          <Button icon={<FaAddressBook />} text='Contact' link='#' />
+          <Button icon={<FaRocket />} text='Stacks' onClick={handleScrollToSection('stacks')} />
+          <Button
+            icon={<FaAddressBook />}
+            text='Contact'
+            onClick={handleScrollToSection('contact')}
+          />
         </div>
       </div>
       {showMenu && (
@@ -56,8 +68,18 @@ const Navbar = () => {
             target='_blank'
             where='1'
           />
-          <Button icon={<FaRocket />} text='Stacks' link='#' where='1' />
-          <Button icon={<FaAddressBook />} text='Contact' link='#' where='1' />
+          <Button
+            icon={<FaRocket />}
+            text='Stacks'
+            onClick={handleScrollToSection('stacks')}
+            where='1'
+          />
+          <Button
+            icon={<FaAddressBook />}
+            text='Contact'
+            onClick={handleScrollToSection('contact')}
+            where='1'
+          />
         </div>
       )}
     </>

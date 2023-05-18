@@ -3,12 +3,13 @@ import React from 'react'
 interface ButtonProps {
   icon: React.ReactElement
   text: string
-  link: string
+  link?: string
   target?: string
   where?: string
+  onClick?: () => void
 }
 
-const Button: React.FC<ButtonProps> = ({ icon, text, link, target, where }) => {
+const Button: React.FC<ButtonProps> = ({ icon, text, link, target, where, onClick }) => {
   const commonClasses = `
     flex
     items-center
@@ -36,8 +37,14 @@ const Button: React.FC<ButtonProps> = ({ icon, text, link, target, where }) => {
       hover:bg-nav_btn_hov
     `
 
+  const handleClick = () => {
+    if (onClick) {
+      onClick()
+    }
+  }
+
   return (
-    <a href={link} target={target} className={linkClasses}>
+    <a href={link} target={target} className={linkClasses} onClick={handleClick}>
       {React.cloneElement(icon, { className: 'w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2' })}
       <span>{text}</span>
     </a>
