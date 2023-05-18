@@ -5,14 +5,14 @@ import FooterIcon from './FooterIcon'
 
 export default function Footer() {
   return (
-    <div className='flex p-5 text-white bg-main h-16 justify-center items-center space-x-10'>
+    <div className='flex flex-col sm:flex-row p-5 text-white bg-main h-16 justify-center items-center text-center space-x-0 sm:space-x-10'>
       <p className='text-xs sm:text-sm'>
         © 2023 Copyright:{' '}
         <a className='font-bold' target='_blank' href='https://joaosouza.tech' rel='noreferrer'>
           joaosouza.tech
         </a>
       </p>
-      <div className='flex'>
+      <div className='mt-2 sm:mt-0 flex'>
         <FooterIcon icon={<FaGithub />} href='https://github.com/lordjoaosouza' target='_blank' />
         <FooterIcon
           icon={<FaLinkedin />}
