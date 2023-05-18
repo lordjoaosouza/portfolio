@@ -12,8 +12,8 @@ export default function AboutMe() {
         <div className='text-center sm:text-left w-1/2 max-w-xs sm:max-w-md justify-center items-center ml-0 sm:ml-10 mt-10'>
           <h1 className='flex text-3xl font-bold mb-2'>A little about me</h1>
           <p className='text-lg'>
-            I'm a passionate individual with diverse interests like motorsports, coffee, gaming,
-            fine wine, and whisky. I'm always eager to learn, spending significant time studying
+            I&apos;m a passionate individual with diverse interests like motorsports, coffee, gaming,
+            fine wine, and whisky. I&apos;m always eager to learn, spending significant time studying
             programming to broaden my horizons.
           </p>
         </div>
