@@ -31,7 +31,6 @@ const Navbar = () => {
           </button>
         </div>
         <div className='flex space-x-4 hidden sm:flex '>
-          <Button icon={<FaRocket />} text='Stacks' link='/#stacks' />
           <div className='relative'>
             <Button
               icon={<FaGithub />}
@@ -44,12 +43,12 @@ const Navbar = () => {
               <span className='relative inline-flex rounded-full h-2 w-2 bg-hover'></span>
             </span>
           </div>
+          <Button icon={<FaRocket />} text='Stacks' link='/#stacks' />
           <Button icon={<FaAddressBook />} text='Contact' link='#' />
         </div>
       </div>
       {showMenu && (
         <div className='flex p-5 h-30 bg-main sm:hidden flex justify-center items-center space-x-2'>
-          <Button icon={<FaRocket />} text='Stacks' link='#' where='1' />
           <Button
             icon={<FaGithub />}
             text='Projects'
@@ -57,6 +56,7 @@ const Navbar = () => {
             target='_blank'
             where='1'
           />
+          <Button icon={<FaRocket />} text='Stacks' link='#' where='1' />
           <Button icon={<FaAddressBook />} text='Contact' link='#' where='1' />
         </div>
       )}
