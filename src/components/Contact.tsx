@@ -8,7 +8,7 @@ export default function Contact() {
     <>
       <div
         id='contact'
-        className='flex flex-col text-white text-center justify-center items-center lg:flex-row mt-20 my-0 sm:my-40 mb-20 sm:mb-0'
+        className='flex flex-col text-white text-center justify-center items-center lg:flex-row mt-20 my-0 sm:my-40 mb-20 sm:mb-40'
       >
         <div className='flex flex-col w-1/2 max-w-xs sm:max-w-md items-center mb-10'>
           <h1 className='flex text-xl sm:text-2xl font-bold mb-6'>If want to message me</h1>
@@ -16,7 +16,7 @@ export default function Contact() {
             <Button
               icon={<FaLinkedin />}
               text='LinkedIn'
-              link='https://www.linkedin.com/in/lordjoaosouza/'
+              link='https://www.linkedin.com/in/lordjoaosouza'
               target='_blank'
             />
             <Button icon={<AiFillMail />} text='Email' link='mailto:contact@joaosouza.tech' />
@@ -26,7 +26,7 @@ export default function Contact() {
             <Button
               icon={<SiBuymeacoffee />}
               text='Coffee'
-              link='https://www.buymeacoffee.com/lordjoaosouza '
+              link='https://www.buymeacoffee.com/lordjoaosouza'
               target='_blank'
               where='1'
             />
