@@ -28,13 +28,13 @@ const Button: React.FC<ButtonProps> = ({ icon, text, link, target, where, onClic
     ? `
       ${commonClasses}
       text-white
-      hover:text-nav_btn_hov
+      hover:text-navBtnHov
     `
     : `
       ${commonClasses}
       text-black
-      bg-nav_btn
-      hover:bg-nav_btn_hov
+      bg-navBtn
+      hover:bg-navBtnHov
     `
 
   const handleClick = () => {

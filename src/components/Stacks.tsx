@@ -122,7 +122,7 @@ export default function Stacks() {
               >
                 {React.cloneElement(stack.icon, {
                   className:
-                    'w-7 h-7 sm:w-9 sm:h-9 hover:text-nav_btn_hov hover:scale-105 hover:duration-150',
+                    'w-7 h-7 sm:w-9 sm:h-9 hover:text-navBtnHov hover:scale-105 hover:duration-150',
                 })}
               </a>
               <Tooltip id='tooltip' />
@@ -142,7 +142,7 @@ export default function Stacks() {
               >
                 {React.cloneElement(stack.icon, {
                   className:
-                    'w-7 h-7 sm:w-9 sm:h-9 hover:text-nav_btn_hov hover:scale-105 hover:duration-150',
+                    'w-7 h-7 sm:w-9 sm:h-9 hover:text-navBtnHov hover:scale-105 hover:duration-150',
                 })}
               </a>
               <Tooltip id='tooltip' />

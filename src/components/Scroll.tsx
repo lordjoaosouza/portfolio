@@ -22,7 +22,7 @@ export default function Scroll() {
   return (
     <div>
       <a className='fixed bottom-5 right-5 z-50 cursor-pointer' onClick={handleScroll}>
-        <BsArrowDownUp className='w-7 h-7 text-white animate-bounce' />
+        <BsArrowDownUp className='w-7 h-7 text-white animate-bounce hover:text-navBtnHov hover:scale-105 hover:duration-150' />
       </a>
     </div>
   )
