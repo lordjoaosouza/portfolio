@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Hero() {
   return (
     <>
@@ -14,10 +16,12 @@ export default function Hero() {
           </p>
         </div>
         <div className='w-1/2 flex justify-center items-center'>
-          <img
+          <Image
             className='w-8/12 min-w-8/12 sm:8/12 sm:min-w-8/12 hover:scale-105 hover:duration-hover:scale-105 hover:duration-200'
             src='illustration.svg'
             alt='illustration'
+            width={500}
+            height={500}
           />
         </div>
       </div>
