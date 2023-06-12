@@ -111,7 +111,9 @@ export default function Stacks() {
       id='stacks'
     >
       <div className='flex flex-col items-center'>
-        <h2 className='font-bold text-xl sm:text-2xl'>Languages I know</h2>
+        <h2 className='font-bold text-xl sm:text-2xl hover:scale-105 hover:duration-200'>
+          Languages I know
+        </h2>
         <div className='grid grid-rows-2 gap-3 sm:gap-4 grid-flow-col sm:grid-rows-1'>
           {stacksLangs.map((stack) => (
             <div key={stack.text} className='mt-6 flex flex-col items-center'>
@@ -121,8 +123,7 @@ export default function Stacks() {
                 data-tooltip-place='top'
               >
                 {React.cloneElement(stack.icon, {
-                  className:
-                    'w-7 h-7 sm:w-9 sm:h-9 hover:text-navBtnHov hover:scale-105 hover:duration-150',
+                  className: 'w-7 h-7 sm:w-9 sm:h-9 hover:text-navBtnHov',
                 })}
               </a>
               <Tooltip id='tooltip' />
@@ -131,7 +132,9 @@ export default function Stacks() {
         </div>
       </div>
       <div className='flex flex-col items-center mt-12'>
-        <h2 className='font-bold text-xl sm:text-2xl'>Technologies I use</h2>
+        <h2 className='font-bold text-xl sm:text-2xl hover:scale-105 hover:duration-200'>
+          Technologies I use
+        </h2>
         <div className='grid grid-rows-3 gap-3 sm:gap-4 grid-flow-col sm:grid-rows-1'>
           {stacksTechs.map((stack) => (
             <div key={stack.text} className='mt-6 flex flex-col items-center'>
@@ -141,8 +144,7 @@ export default function Stacks() {
                 data-tooltip-place='top'
               >
                 {React.cloneElement(stack.icon, {
-                  className:
-                    'w-7 h-7 sm:w-9 sm:h-9 hover:text-navBtnHov hover:scale-105 hover:duration-150',
+                  className: 'w-7 h-7 sm:w-9 sm:h-9 hover:text-navBtnHov',
                 })}
               </a>
               <Tooltip id='tooltip' />

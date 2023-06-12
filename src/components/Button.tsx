@@ -21,7 +21,7 @@ const Button: React.FC<ButtonProps> = ({ icon, text, link, target, where, onClic
     w-32
     h-10
     hover:scale-105
-    hover:duration-150
+    hover:duration-200
   `
 
   const linkClasses = where

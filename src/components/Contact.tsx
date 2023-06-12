@@ -11,7 +11,9 @@ export default function Contact() {
         className='flex flex-col text-white text-center justify-center items-center lg:flex-row mt-20 my-0 sm:my-40 mb-20 sm:mb-40'
       >
         <div className='flex flex-col w-1/2 max-w-xs sm:max-w-md items-center mb-10'>
-          <h1 className='flex text-xl sm:text-2xl font-bold mb-6'>If want to message me</h1>
+          <h1 className='flex text-xl sm:text-2xl font-bold mb-6 hover:scale-105 hover:duration-200'>
+            If want to message me
+          </h1>
           <div className='flex space-x-4 text-sm sm:text-sm rounded-xl'>
             <Button
               icon={<FaLinkedin />}
@@ -34,7 +36,7 @@ export default function Contact() {
         </div>
         <div className='w-1/2 flex justify-center items-center'>
           <img
-            className='w-8/12 min-w-8/12 sm:8/12 sm:min-w-8/12 hover:scale-105 hover:duration-150'
+            className='w-8/12 min-w-8/12 sm:8/12 sm:min-w-8/12 hover:scale-105 hover:duration-200'
             src='robot.svg'
             alt='robot'
           />
